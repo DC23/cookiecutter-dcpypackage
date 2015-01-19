@@ -1,0 +1,16 @@
+# Build artifacts
+tags
+build/
+dist/
+{{repo_name}}.egg-info/
+.coverage
+htmlcov/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# PyCharm Project files contain local settings, and so are not appropriate for Git
+.project
+.idea/
+*.dat
