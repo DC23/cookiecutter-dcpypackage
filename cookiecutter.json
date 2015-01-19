@@ -5,7 +5,9 @@
 	"project_name": "Python Boilerplate",
 	"repo_name": "boilerplate",
 	"project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    "license": "CSIRO BSD",
 	"release_date": "2015-01-19",
 	"year": "2015",
-	"version": "0.1.0"
+	"version": "0.1.0",
+    "project_homepage": "https://somewhere"
 }

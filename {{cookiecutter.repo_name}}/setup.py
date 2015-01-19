@@ -14,9 +14,9 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 class PyTest(TestCommand):
 
-    ''' Entry point for py.test that allows 'python setup.py test'
+    """ Entry point for py.test that allows 'python setup.py test'
     to work correctly
-    '''
+    """
 
     def finalize_options(self):
         TestCommand.finalize_options(self)
@@ -29,21 +29,20 @@ class PyTest(TestCommand):
         sys.exit(errcode)
 
 setup(
-    name='sambuca',
-    version='0.1.0',
-    description='TODO: Sambuca short description',
+    name='{{ cookiecutter.repo_name }}',
+    version='{{ cookiecutter.version }}',
+    description='{{ cookiecutter.project_short_description }}',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://stash.csiro.au/users/col52j/repos/sambuca/browse',
+    url='{{ cookiecutter.project_homepage }}',
 
     # Author details
-    # todo: actual author probably shouldn't be DC
-    author='Daniel Collins',
-    author_email='daniel.collins@csiro.au',
+    author='{{ cookiecutter.full_name }}',
+    author_email='{{ cookiecutter.email }}',
 
     # Choose your license
-    license='TODO: Select license',
+    license='{{ cookiecutter.license }}',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -57,17 +56,14 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Scientists',
-        'Topic :: Hydrology :: Water Quality',
+        'Intended Audience :: ',
+        'Topic :: Todo :: Todo',
 
         # Pick your license as you wish (should match "license" above)
-        # 'License :: OSI Approved :: MIT License',
-        'License :: TODO :: Unknown',
+        'License :: OSI Approved :: {{ cookiecutter.license }}',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        # todo: which languages can we actually support?
-        # Edit as this becomes clear
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
@@ -77,12 +73,12 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='Hydrology Modeling Bathymetry',
+    keywords='',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     # packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    packages=['sambuca'],
+    packages=['{{ cookiecutter.repo_name }}'],
     package_dir={"": "src"},
 
     include_package_data=True,
@@ -91,7 +87,7 @@ setup(
 
     platforms='any',
 
-    test_suite='tests.test_sambuca',
+    test_suite='tests.test_{{ cookiecutter.repo_name }}',
 
     # List run-time dependencies here.  These will be installed by pip when your
     # project is installed. For an analysis of "install_requires" vs pip's
@@ -99,10 +95,6 @@ setup(
     # https://packaging.python.org/en/latest/technical.html#install-requires-vs-requirements-files
     install_requires=[
         'future',
-        'scipy',
-        'numpy',
-        # 'GDAL',
-        'spectral',
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -116,7 +108,6 @@ setup(
             'check-manifest',
             'sphinx',
             'sphinxcontrib-napoleon',
-            'sphinx-py3doc-enhanced-theme',
             'wheel',
         ],
         'test': [
@@ -129,9 +120,8 @@ setup(
     },
 
     # If there are data files included in your packages that need to be
-    # installed, specify them here.
+    # installed, specify them here using relative paths:
     package_data={
-        # 'sambuca': ['./tests/data/*.mat'],
     },
 
     # Although 'package_data' is the preferred approach, in some case you may
@@ -145,9 +135,9 @@ setup(
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
-        # 'console_scripts': ['sambuca=sambuca:main',],
+        # 'console_scripts': ['{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}:main',],
     },
 
-    # this might be untrue if we add any data files
-    zip_safe=True,
+    # Is your project zip safe?
+    # zip_safe=True,
 )
