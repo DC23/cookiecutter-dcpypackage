@@ -1,8 +1,8 @@
 {
-	"full_name": "Daniel Collins",
-	"email": "Daniel.Collins@csiro.au",
+	"full_name": "Your Name Here",
+	"email": "youremail@mail.org",
 	"github_username": "DC23",
-    "organisation": "CSIRO",
+    "organisation": "Your Organisation Here",
 	"project_name": "Python Boilerplate",
 	"repo_name": "boilerplate",
 	"project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
