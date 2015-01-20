@@ -21,6 +21,11 @@ Features:
 - `pylint <http://docs.pylint.org>`_, with tests excluded by default.
 - `sphinx <http://sphinx-doc.org/index.html>`_ documentation, with shared files between Sphinx and the Python package files, for reduced maintenance.
 - `bumpversion <https://pypi.python.org/pypi/bumpversion>`_ for version management
+- Universal build, targetting Python 2 and 3.
+    - Yes, I am aware of `tox <http://tox.readthedocs.org/en/latest/index.html>`_, and tox support can easily be added. I had
+      difficulties with tox testing combined with the `--system-site-packages`
+      option in `virtualenv`, and so it is not including in the template at
+      present.
 - Most build artifacts go to a common `build` directory.
 
 Usage
