@@ -5,8 +5,9 @@
 {{ cookiecutter.project_short_description}}
 
 * Free software: {{ cookiecutter.license }}
-* Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org.
-  
+* Homepage: {{ cookiecutter.project_homepage }}
+* Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org
+
 Installation
 ------------
 ::
@@ -24,3 +25,5 @@ documentation, and building installing packages. See :ref:`makefile`.
 package version numbers. This ensures that the version number is correctly
 incremented in all required files. Please see the bumpversion documentation for
 usage instructions, and do not edit the version strings directly.
+
+Version numbers follow `the Semantic versioning guidelines <semver.org>`_.

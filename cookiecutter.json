@@ -10,5 +10,7 @@
 	"release_date": "2015-01-19",
 	"year": "2015",
 	"version": "0.1.0",
-    "project_homepage": "https://somewhere"
+    "project_homepage": "https://somewhere",
+    "bumpversion_commit": "True",
+    "bumpversion_tag": "True"
 }
