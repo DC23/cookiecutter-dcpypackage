@@ -1,5 +1,5 @@
-Welcome to Sambuca's documentation!
-===================================
+Welcome to {{ cookiecutter.project_name }}'s documentation!
+===========================================================
 
 Contents
 --------
@@ -8,7 +8,6 @@ Contents
     :maxdepth: 2
 
     readme
-    csiro_development_environment
     installation
     tutorial
     usage

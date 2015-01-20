@@ -4,7 +4,7 @@
 
 {{ cookiecutter.project_short_description}}
 
-* Free software: ??? license
+* Free software: {{ cookiecutter.license }}
 * Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org.
   
 Installation

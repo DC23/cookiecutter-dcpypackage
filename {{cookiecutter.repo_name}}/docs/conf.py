@@ -18,9 +18,9 @@ if os.getenv('SPELLCHECK'):
 
 source_suffix = '.rst'
 master_doc = 'index'
-project = u'Sambuca'
-copyright = u'2014-15, CSIRO'
-version = release = '0.1.0'
+project = '{{ cookiecutter.project_name }}'
+copyright = '{{ cookiecutter.year }}, {{ cookiecutter.organisation }}'
+version = release = '{{ cookiecutter.version }}'
 pygments_style = 'trac'
 templates_path = ['.']
 html_theme = 'default'

@@ -4,4 +4,4 @@ API Reference
 .. toctree::
     :glob:
 
-    sambuca*
+    {{ cookiecutter.repo_name }}*

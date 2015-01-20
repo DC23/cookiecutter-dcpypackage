@@ -1,11 +1,6 @@
-=====
 Usage
 =====
 
-To use Sambuca in a project::
+To use {{ cookiecutter.project_name }} in a project::
 
-	import sambuca
-
-Or::
-
-    import sambuca as sb
+	import {{ cookiecutter.repo_name }}
