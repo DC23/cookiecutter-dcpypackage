@@ -21,6 +21,7 @@ Features:
 - `pylint <http://docs.pylint.org>`_, with tests excluded by default.
 - `sphinx <http://sphinx-doc.org/index.html>`_ documentation, with shared files between Sphinx and the Python package files, for reduced maintenance.
 - `bumpversion <https://pypi.python.org/pypi/bumpversion>`_ for version management
+- Most build artifacts go to a common `build` directory.
 
 Usage
 -----

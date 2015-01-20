@@ -11,10 +11,18 @@ Contents
     installation
     tutorial
     usage
-    reference/index
     contributing
     authors
     changelog
+    license
+
+API Reference
+-------------
+
+.. toctree::
+    :maxdepth: 2
+
+    reference/index
 
 Indices and tables
 ------------------
