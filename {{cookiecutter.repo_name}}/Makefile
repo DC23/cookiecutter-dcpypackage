@@ -15,9 +15,9 @@ help:
 	echo '  * install-deps: installs development and test dependencies into your virtual environment.'
 	echo '  * develop: installs {{ cookiecutter.repo_name }} in development mode.'
 	echo '  * lint: runs pylint.'
-	echo '  * htmldocs: builds the HTML documentation.'
-	echo '  * pdfdocs: builds the documentation in PDF format.'
-	echo '  * latexdocs: builds LaTeX source, used to generate other formats.'
+	echo '  * html: builds the HTML documentation.'
+	echo '  * pdf: builds the documentation in PDF format.'
+	echo '  * latex: builds LaTeX source, used to generate other formats.'
 	echo '  * alldocs: builds all documentation formats.'
 	echo '  * sdist: builds a source distribution.'
 	echo '  * bdist_wheel: builds a universal wheel distribution.'
@@ -54,18 +54,18 @@ sdist:
 bdist_wheel:
 	python setup.py bdist_wheel
 
-.PHONY: htmldocs
-htmldocs:
+.PHONY: html
+html:
 	sphinx-build -b html docs build/docs/html
 
-.PHONY: latexdocs
-latexdocs:
+.PHONY: latex
+latex:
 	sphinx-build -b latex docs build/docs/latex
 
-pdfdocs: latexdocs 
+pdf: latex 
 	$(MAKE) -C build/docs/latex all-pdf
 	mkdir -p ./build/docs/pdf/
 	mv build/docs/latex/*.pdf build/docs/pdf/
 
-alldocs: htmldocs latexdocs pdfdocs
+alldocs: html latex pdf
 
