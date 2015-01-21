@@ -6,6 +6,8 @@ the author's preferred Python package setup.
 
 Features:
 
+* Does not assume your project will live on GitHub. There are
+  cookiecutter variables for the project homepage and issues page.
 * [pytest](http://pytest.org/latest/) for unit tests, with integration into setup.py.
     * [pytest-cov](https://pypi.python.org/pypi/pytest-cov) plugin for test coverage reporting.
     * [pytest-sugar](https://pypi.python.org/pypi/pytest-sugar) plugin for pretty test output.

@@ -7,7 +7,7 @@ little bit helps, and credit will always be given.
 Bug reports
 -----------
 
-When `reporting a bug <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues>`_ please include:
+When `reporting a bug <{{ cookiecutter.project_issues_url }}>`_ please include:
 
     * Your operating system name and version.
     * Any details about your local setup that might be helpful in troubleshooting.
@@ -23,14 +23,14 @@ Documentation improvements
    Contributed code should follow the same conventions.
    For examples, please see the `Napoleon examples
    <http://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html>`_,
-   or the `Google Python Style Guide 
+   or the `Google Python Style Guide
    <http://google-styleguide.googlecode.com/svn/trunk/pyguide.html>`_.
-   
+
 
 Feature requests and feedback
 -----------------------------
 
-The best way to send feedback is to `file an issue <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues>`_
+The best way to send feedback is to `file an issue <{{ cookiecutter.project_issues_url }}>`_
 
 If you are proposing a feature:
 

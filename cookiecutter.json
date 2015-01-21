@@ -11,6 +11,7 @@
 	"year": "2015",
 	"version": "0.1.0",
     "project_homepage": "https://yourprojecturl",
+    "project_issues_url": "https://yourprojecturl/issues",
     "bumpversion_commit": "True",
     "bumpversion_tag": "True"
 }
