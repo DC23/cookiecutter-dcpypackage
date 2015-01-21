@@ -42,6 +42,7 @@ Or, implement the feature yourself and submit a pull request.
 
 Development
 -----------
+.. note:: This section assumes that your project is hosted on GitHub. Please edit if this is not the case.
 
 To set up {{ cookiecutter.project_name }} for local development:
 
