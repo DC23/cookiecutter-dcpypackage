@@ -116,6 +116,7 @@ setup(
             'pytest-cov',
             'pytest-sugar',
             'pylint',
+            'tox',
         ],
     },
 

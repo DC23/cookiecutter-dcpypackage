@@ -6,7 +6,6 @@ the author's preferred Python package setup.
 
 Features:
 
-* utility makefile for common tasks.
 * [pytest](http://pytest.org/latest/) for unit tests, with integration into setup.py.
     * [pytest-cov](https://pypi.python.org/pypi/pytest-cov) plugin for test coverage reporting.
     * [pytest-sugar](https://pypi.python.org/pypi/pytest-sugar) plugin for pretty test output.
@@ -16,8 +15,12 @@ Features:
 * [bumpversion](https://pypi.python.org/pypi/bumpversion) for version management
 * Universal build, targetting Python 2 and 3.
 * Most build artifacts go to a common build directory.
+* Tests directory is underneath the module directory, as this allows easy use of
+  the pkg_resources API for unit test data files.
+* Basic [tox](http://tox.readthedocs.org/en/latest/index.html) configuration.
+* Utility makefile for common tasks.
 
-Inspiration, and some boilerplate text taken from some other templates,
+Inspiration, and some boilerplate text taken from other templates,
 including:
 
 * [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
