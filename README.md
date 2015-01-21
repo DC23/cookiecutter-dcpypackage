@@ -49,5 +49,5 @@ Run make with no target for a list of make options:
 
     $ make
 
-Note that bumpversion does not have a make target. It is easier to run
-bumpversion directly.
+Note that bumpversion and tox do not have make targets. It is easier to run
+them directly.
