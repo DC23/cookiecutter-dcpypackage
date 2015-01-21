@@ -14,6 +14,7 @@ Features:
     * HTML coverage reports are enabled by default. See the htmlcov directory.
 * [pylint](http://docs.pylint.org), with tests excluded by default.
 * [sphinx](http://sphinx-doc.org/index.html) documentation, with shared files between Sphinx and the Python package files, for reduced maintenance.
+    * Napoleon(http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html) plugin to allow Google or NumPy format docstrings.
 * [bumpversion](https://pypi.python.org/pypi/bumpversion) for version management
 * Universal build, targetting Python 2 and 3.
 * Most build artifacts go to a common build directory.
