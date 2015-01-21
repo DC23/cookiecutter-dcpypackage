@@ -2,7 +2,7 @@ cookiecutter-dcpypackage
 ========================
 
 A [cookiecutter](https://github.com/audreyr/cookiecutter) template, with
-the author's preferred Python Package setup.
+the author's preferred Python package setup.
 
 Features:
 
