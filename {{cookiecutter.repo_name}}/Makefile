@@ -14,6 +14,7 @@ help:
 	echo '  * clean: removes the build and htmlcov (coverage reports) directories, as well as __pycache__ and *.pyc files. Note that a clean also removes the generated documentation (as this is placed into build/docs).'
 	echo '  * install-deps: installs development and test dependencies into your virtual environment.'
 	echo '  * develop: installs {{ cookiecutter.repo_name }} in development mode.'
+	echo '  * test: runs py.test.'
 	echo '  * lint: runs pylint.'
 	echo '  * html: builds the HTML documentation.'
 	echo '  * pdf: builds the documentation in PDF format.'
@@ -31,7 +32,7 @@ tests: test
 
 .PHONY: clean
 clean:
-	rm -rf build/ htmlcov/
+	rm -rf build/
 	find ./src/ -name "__pycache__" -exec rm -rf {} \;
 	find ./src/ -name "*.pyc" -exec rm -rf {} \;
 
@@ -62,7 +63,7 @@ html:
 latex:
 	sphinx-build -b latex docs build/docs/latex
 
-pdf: latex 
+pdf: latex
 	$(MAKE) -C build/docs/latex all-pdf
 	mkdir -p ./build/docs/pdf/
 	mv build/docs/latex/*.pdf build/docs/pdf/

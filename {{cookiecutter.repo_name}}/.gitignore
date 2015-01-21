@@ -1,10 +1,9 @@
-# Build artifacts
+# Build artifacts and directories
 tags
 build/
 dist/
 {{repo_name}}.egg-info/
 .coverage
-htmlcov/
 
 # Python cache files
 __pycache__/

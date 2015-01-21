@@ -1,2 +1,6 @@
 [run]
 omit = */tests/*
+
+[html]
+directory = build/htmlcov
+title = {{ cookiecutter.project_name }} Test Coverage Report
