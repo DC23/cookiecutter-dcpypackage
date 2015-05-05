@@ -12,6 +12,7 @@ help:
 	echo 'Targets supported are:'
 	echo
 	echo '  * clean: removes the build and htmlcov (coverage reports) directories, as well as __pycache__ and *.pyc files. Note that a clean also removes the generated documentation (as this is placed into build/docs).'
+	echo '  * sitepkg-develop: Use this only when you are using a virtual environment created with the --system-site-packages flag. It forcibly installs some packages into the virtual environment to work around issues where a package and its plugins are installed to different locations'
 	echo '  * install-deps: installs development and test dependencies into your virtual environment.'
 	echo '  * develop: installs {{ cookiecutter.repo_name }} in development mode.'
 	echo '  * test: runs py.test.'
@@ -42,6 +43,12 @@ install-deps:
 
 develop: install-deps
 	python setup.py develop
+
+#--system-site-packages plugin issue workaround
+# if additional plugins to sphinx and pytest are added to setup.py, they must
+# also be added here.
+sitepkg-develop: develop
+	pip install --ignore-installed sphinx sphinxcontrib-napoleon pytest pytest-cov pytest-sugar
 
 .PHONY: lint
 lint:
