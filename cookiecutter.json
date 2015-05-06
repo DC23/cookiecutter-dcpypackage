@@ -14,5 +14,8 @@
     "project_issues_url": "https://yourprojecturl/issues",
     "bumpversion_commit": "True",
     "bumpversion_tag": "True",
-    "cli_entry_point": "start_cli"
+    "cli_entry_point_function_name": "start_cli",
+    "gui_entry_point_function_name": "start_gui",
+    "cli_script_name": "cli_entry_point",
+    "gui_script_name": "gui_entry_point"
 }

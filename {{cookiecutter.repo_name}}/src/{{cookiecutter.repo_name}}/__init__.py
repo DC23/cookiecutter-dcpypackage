@@ -4,7 +4,11 @@
     {{ cookiecutter.project_short_description }}
 """
 
-from .{{ cookiecutter.repo_name }} import {{cookiecutter.cli_entry_point}}
+# import the CLI entry point
+from .{{ cookiecutter.repo_name }} import {{ cookiecutter.cli_entry_point_function_name }}
+
+# import the GUI entry point
+from .{{ cookiecutter.repo_name }} import {{ cookiecutter.gui_entry_point_function_name }}
 
 
 __author__ = '{{ cookiecutter.full_name }}'

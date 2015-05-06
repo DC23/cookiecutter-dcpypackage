@@ -135,8 +135,10 @@ setup(
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
+    # Delete either or both of these if not required (and remove the corresponding imports in the package __init__.py
     entry_points={
-        'console_scripts': ['{{ cookiecutter.repo_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.cli_entry_point }}',],
+        'console_scripts': ['{{ cookiecutter.cli_script_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.cli_entry_point_function_name }}',],
+        'gui_scripts': ['{{ cookiecutter.gui_script_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.gui_entry_point_function_name }}',],
     },
 
     # Is your project zip safe?
