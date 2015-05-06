@@ -17,11 +17,16 @@ Features:
     * [Napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html) plugin to allow Google or NumPy format docstrings.
 * [bumpversion](https://pypi.python.org/pypi/bumpversion) for version management
 * Universal build, targetting Python 2 and 3.
+    * [python-future](http://python-future.org/index.html) included for writing
+      backward-compatible Python 3 code.
 * Most build artifacts go to a common build directory.
 * Tests directory is underneath the module directory, as this allows easy use of
   the pkg_resources API for unit test data files.
 * Basic [tox](http://tox.readthedocs.org/en/latest/index.html) configuration.
 * Utility makefile for common tasks.
+* Entry points for both CLI and GUI scripts are generated. Remove either or both
+  if not required. I required one or the other often enough that having them
+  generated suits me.
 
 Inspiration, and some boilerplate text taken from other templates,
 including:
