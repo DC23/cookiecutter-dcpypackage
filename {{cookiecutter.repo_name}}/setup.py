@@ -136,7 +136,7 @@ setup(
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
-        # 'console_scripts': ['{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}:main',],
+        'console_scripts': ['{{ cookiecutter.repo_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.cli_entry_point }}',],
     },
 
     # Is your project zip safe?

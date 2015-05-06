@@ -4,6 +4,9 @@
     {{ cookiecutter.project_short_description }}
 """
 
+from .{{ cookiecutter.repo_name }} import {{cookiecutter.cli_entry_point}}
+
+
 __author__ = '{{ cookiecutter.full_name }}'
 __email__ = '{{ cookiecutter.email }}'
 __version__ = '{{ cookiecutter.version }}'
