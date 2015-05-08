@@ -1,5 +1,5 @@
 # Always prefer setuptools over distutils
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 from codecs import open  # To use a consistent encoding
 from os import path
@@ -77,9 +77,7 @@ setup(
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    # packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    packages=['{{ cookiecutter.repo_name }}'],
-    package_dir={"": "src"},
+    packages=find_packages(exclude=['tests'])
 
     include_package_data=True,
 

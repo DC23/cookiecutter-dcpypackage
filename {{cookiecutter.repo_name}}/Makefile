@@ -34,8 +34,8 @@ tests: test
 .PHONY: clean
 clean:
 	rm -rf build/
-	find ./src/ -name "__pycache__" -exec rm -rf {} \;
-	find ./src/ -name "*.pyc" -exec rm -rf {} \;
+	find ./{{cookiecutter.repo_name}}/ -name "__pycache__" -exec rm -rf {} \;
+	find ./{{cookiecutter.repo_name}}/ -name "*.pyc" -exec rm -rf {} \;
 
 .PHONY: install-deps
 install-deps:
@@ -52,7 +52,7 @@ sitepkg-develop: develop
 
 .PHONY: lint
 lint:
-	pylint ./src/{{ cookiecutter.repo_name }}/
+	pylint ./{{ cookiecutter.repo_name }}/
 
 .PHONY: sdist
 sdist:

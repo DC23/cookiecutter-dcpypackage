@@ -1,8 +1,7 @@
 graft docs
 graft examples
-graft src
+graft {{cookiecutter.repo_name}}
 
-include .bumpversion.cfg
 include .coverage
 include pylintrc
 
