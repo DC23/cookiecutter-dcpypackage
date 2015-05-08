@@ -23,7 +23,7 @@ copyright = '{{ cookiecutter.year }}, {{ cookiecutter.organisation }}'
 version = release = '{{ cookiecutter.version }}'
 pygments_style = 'trac'
 templates_path = ['.']
-html_theme = 'default'
+html_theme = 'alabaster'
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'
 html_split_index = True
