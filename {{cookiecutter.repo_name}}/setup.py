@@ -102,18 +102,20 @@ setup(
     extras_require={
         'dev': [
             'bumpversion',
-            'pylint',
             'check-manifest',
+            'ipython',
+            'ipdb',
+            'pylint',
             'sphinx',
-            'sphinxcontrib-napoleon',
+            'sphinx_rtd_theme',
             'wheel',
         ],
         'test': [
             'coverage',
+            'pylint',
             'pytest',
             'pytest-cov',
             'pytest-sugar',
-            'pylint',
             'tox',
         ],
     },
