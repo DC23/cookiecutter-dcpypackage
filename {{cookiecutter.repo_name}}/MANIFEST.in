@@ -2,7 +2,7 @@ graft docs
 graft examples
 graft {{cookiecutter.repo_name}}
 
-include .coverage
+include .coveragerc
 include pylintrc
 
 include AUTHORS.rst
