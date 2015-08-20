@@ -28,27 +28,34 @@ help:
 test:
 	py.test
 
-.PHONY: tests
-tests: test
-
 .PHONY: clean
 clean:
+	echo Cleaning ...
 	rm -rf build/
 	find ./{{cookiecutter.repo_name}}/ -name "__pycache__" -exec rm -rf {} \;
 	find ./{{cookiecutter.repo_name}}/ -name "*.pyc" -exec rm -rf {} \;
+	echo ... done
 
 .PHONY: install-deps
 install-deps:
-	pip install --upgrade -e.[dev,test]
+	pip install -e.[dev,test]
 
+.PHONY: develop
 develop: install-deps
 	python setup.py develop
 
 #--system-site-packages plugin issue workaround
-# if additional plugins to sphinx and pytest are added to setup.py, they must
+# To work correctly with virtual environments, sphinx, pytest, and all their
+# plugins must be installed into the virtual environment even if they are
+# already available in the site packages.
+# If additional plugins to sphinx and pytest are added to setup.py, they must
 # also be added here.
+.PHONY: sitepkg-develop
 sitepkg-develop: develop
-	pip install --ignore-installed sphinx sphinxcontrib-napoleon pytest pytest-cov pytest-sugar
+	pip install --ignore-installed \
+	sphinx \
+	pytest pytest-cov pytest-sugar \
+	ipython ipdb
 
 .PHONY: lint
 lint:
