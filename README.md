@@ -4,6 +4,9 @@ cookiecutter-dcpypackage
 A [cookiecutter](https://github.com/audreyr/cookiecutter) template, with
 the author's preferred Python package setup.
 
+This conditional branch currently requires conditional file and directory renderering from
+[my cookiecutter fork](https://github.com/DC23/cookiecutter).
+
 Features:
 
 * Does not assume your project will live on GitHub. There are
