@@ -111,10 +111,10 @@ setup(
             'wheel',
         ],
         'test': [
-            'coverage',
+            {%if cookiecutter.enable_coverage%}'coverage',{%endif%}
             'pylint',
             'pytest',
-            'pytest-cov',
+            {%if cookiecutter.enable_coverage%}'pytest-cov',{%endif%}
             'pytest-sugar',
             {%if cookiecutter.enable_tox%}'tox',{%endif%}
         ],
