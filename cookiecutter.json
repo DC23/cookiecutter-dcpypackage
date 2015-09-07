@@ -14,7 +14,7 @@
     "project_issues_url": "https://yourprojecturl/issues",
     "bumpversion_commit": "True",
     "bumpversion_tag": "True",
-    "enable_tox":, "",
+    "enable_tox": "",
     "cli_entry_point_function_name": "start_cli",
     "gui_entry_point_function_name": "start_gui",
     "cli_script_name": "cli_entry_point",
