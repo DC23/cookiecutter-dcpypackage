@@ -20,8 +20,8 @@ Development
 
 There is a makefile in the project root with targets for the most common
 development operations such as lint checks, running unit tests, building the
-documentation, and building installer packages. `tox` does not have a target,
-as `make tox` is more typing than `tox`.
+documentation, and building installer packages. {%if cookiecutter.enable_tox%}`tox` does not have a target,
+as `make tox` is more typing than `tox`.{%endif%}
 
 Run make with no target to see the list of targets::
 

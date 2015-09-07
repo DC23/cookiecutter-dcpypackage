@@ -116,7 +116,7 @@ setup(
             'pytest',
             'pytest-cov',
             'pytest-sugar',
-            'tox',
+            {%if cookiecutter.enable_tox%}'tox',{%endif%}
         ],
     },
 
