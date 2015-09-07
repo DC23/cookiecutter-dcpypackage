@@ -137,8 +137,10 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     # Delete either or both of these if not required (and remove the corresponding imports in the package __init__.py
     entry_points={
+        {%if cookiecutter.enable_entry_points%}
         'console_scripts': ['{{ cookiecutter.cli_script_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.cli_entry_point_function_name }}',],
         'gui_scripts': ['{{ cookiecutter.gui_script_name }} = {{ cookiecutter.repo_name }}:{{ cookiecutter.gui_entry_point_function_name }}',],
+        {%endif%}
     },
 
     # Is your project zip safe?

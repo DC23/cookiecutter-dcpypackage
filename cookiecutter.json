@@ -16,6 +16,7 @@
     "bumpversion_tag": "True",
     "enable_tox": "",
     "enable_coverage": "",
+    "enable_entry_points": "",
     "cli_entry_point_function_name": "start_cli",
     "gui_entry_point_function_name": "start_gui",
     "cli_script_name": "cli_entry_point",
