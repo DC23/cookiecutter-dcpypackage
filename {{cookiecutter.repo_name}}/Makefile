@@ -15,7 +15,9 @@ help:
 	echo '  * sitepkg-develop: Use this only when you are using a virtual environment created with the --system-site-packages flag. It forcibly installs some packages into the virtual environment to work around issues where a package and its plugins are installed to different locations'
 	echo '  * install-deps: installs development and test dependencies into your virtual environment.'
 	echo '  * develop: installs {{ cookiecutter.repo_name }} in development mode.'
+	echo '  * uninstall: removes the development package from pip.'
 	echo '  * test: runs py.test.'
+	echo '  * test-slow: runs py.test, including slow tests.'
 	echo '  * lint: runs pylint.'
 	echo '  * html: builds the HTML documentation.'
 	echo '  * pdf: builds the documentation in PDF format.'
@@ -28,6 +30,9 @@ help:
 test:
 	py.test
 
+.PHONY: test-slow
+test-slow:
+	py.test --runslow
 .PHONY: clean
 clean:
 	echo Cleaning ...
@@ -43,6 +48,11 @@ install-deps:
 .PHONY: develop
 develop: install-deps
 	python setup.py develop
+
+.PHONY: uninstall
+uninstall:
+	pip uninstall --yes bios2_workflow
+	rm -rf *.egg-info/
 
 #--system-site-packages plugin issue workaround
 # To work correctly with virtual environments, sphinx, pytest, and all their
