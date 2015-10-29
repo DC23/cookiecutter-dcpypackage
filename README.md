@@ -15,6 +15,13 @@ Features:
     * [pytest-cov](https://pypi.python.org/pypi/pytest-cov) plugin for test coverage reporting.
     * [pytest-sugar](https://pypi.python.org/pypi/pytest-sugar) plugin for pretty test output.
     * HTML coverage reports are enabled by default. See the htmlcov directory.
+    * pytest configuration for `py.test --runslow` option that runs slow tests.
+      There is a `@slow` decorator defined in `tests/common.py` for marking slow
+      tests.
+    * looping test runner script that will run your tests in a loop. Simply hit
+      any key to re-run tests, or ctrl-c to quit. Takes two arguments: the max
+      number of loops, and the optional word 'slow' to indicate that slow tests
+      should be included.
 * [pylint](http://docs.pylint.org), with tests excluded by default.
 * [sphinx](http://sphinx-doc.org/index.html) documentation, with shared files between Sphinx and the Python package files, for reduced maintenance.
 * [bumpversion](https://pypi.python.org/pypi/bumpversion) for version management
