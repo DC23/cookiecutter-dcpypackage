@@ -1,14 +1,17 @@
-graft docs
+# Directories to include
 graft examples
-graft {{cookiecutter.repo_name}}
 
+# Directories to exclude
+prune docs
+
+# Files to include
 {%if cookiecutter.enable_coverage%}include .coveragerc{%endif%}
 include pylintrc
-
 include AUTHORS.rst
 include CHANGELOG.rst
 include CONTRIBUTING.rst
 include LICENSE
 include README.rst
 
+# File patterns to exclude wherever they are found
 global-exclude *.py[co] __pycache__ *.so *.pyd
