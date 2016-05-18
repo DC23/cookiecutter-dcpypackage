@@ -1,4 +1,5 @@
 SHELL=/bin/sh
+PACKAGE_NAME={{ cookiecutter.repo_name }}
 
 .SILENT:
 .IGNORE:
@@ -33,12 +34,13 @@ test:
 .PHONY: test-slow
 test-slow:
 	py.test --runslow
+
 .PHONY: clean
 clean:
 	echo Cleaning ...
 	rm -rf build/
-	find ./{{cookiecutter.repo_name}}/ -name "__pycache__" -exec rm -rf {} \;
-	find ./{{cookiecutter.repo_name}}/ -name "*.pyc" -exec rm -rf {} \;
+	find ./$(PACKAGE_NAME)/ -name "__pycache__" -exec rm -rf {} \;
+	find ./$(PACKAGE_NAME)/ -name "*.pyc" -exec rm -rf {} \;
 	echo ... done
 
 .PHONY: install-deps
@@ -51,7 +53,7 @@ develop: install-deps
 
 .PHONY: uninstall
 uninstall:
-	pip uninstall --yes bios2_workflow
+	pip uninstall --yes $(PACKAGE_NAME)
 	rm -rf *.egg-info/
 
 #--system-site-packages plugin issue workaround
@@ -69,7 +71,7 @@ sitepkg-develop: develop
 
 .PHONY: lint
 lint:
-	pylint ./{{ cookiecutter.repo_name }}/
+	pylint ./$(PACKAGE_NAME)/
 
 .PHONY: sdist
 sdist:
