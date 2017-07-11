@@ -17,7 +17,6 @@
     "enable_tox": "",
     "enable_coverage": "",
     "enable_entry_points": "",
-    "enable_docs": "",
     "cli_entry_point_function_name": "start_cli",
     "gui_entry_point_function_name": "start_gui",
     "cli_script_name": "cli_entry_point",
