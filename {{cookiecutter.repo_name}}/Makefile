@@ -26,6 +26,7 @@ help:
 	echo '  * alldocs: builds all documentation formats.'
 	echo '  * sdist: builds a source distribution.'
 	echo '  * bdist_wheel: builds a universal wheel distribution.'
+	echo '  * upload: upload builds to PyPI.'
 
 .PHONY: test
 test:
@@ -80,6 +81,13 @@ sdist:
 .PHONY: bdist_wheel
 bdist_wheel:
 	python setup.py bdist_wheel
+	
+# Upload package to PyPI. You must edit this if you only require specific package types.
+.PHONY: upload
+upload: clean
+	rm -rf dist/
+	python setup.py sdist bdist_wheel
+	twine upload dist/*
 
 .PHONY: html
 html:
