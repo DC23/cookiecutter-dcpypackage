@@ -1,9 +1,6 @@
 SHELL=/bin/sh
 PACKAGE_NAME={{ cookiecutter.repo_name }}
 
-.SILENT:
-.IGNORE:
-
 .PHONY: help
 help:
 	echo
@@ -40,8 +37,8 @@ test-slow:
 clean:
 	echo Cleaning ...
 	rm -rf build/
-	find ./$(PACKAGE_NAME)/ -name "__pycache__" -exec rm -rf {} \;
-	find ./$(PACKAGE_NAME)/ -name "*.pyc" -exec rm -rf {} \;
+	-find ./$(PACKAGE_NAME)/ -name "__pycache__" -exec rm -rf {} \;
+	-find ./$(PACKAGE_NAME)/ -name "*.pyc" -exec rm -rf {} \;
 	echo ... done
 
 .PHONY: install-deps
@@ -54,7 +51,7 @@ develop: install-deps
 
 .PHONY: uninstall
 uninstall:
-	pip uninstall --yes $(PACKAGE_NAME)
+	-pip uninstall --yes $(PACKAGE_NAME)
 	rm -rf *.egg-info/
 
 #--system-site-packages plugin issue workaround
